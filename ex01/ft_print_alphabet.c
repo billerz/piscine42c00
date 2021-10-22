@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: porrapat <ppetchda@42.fr>                  +#+  +:+       +#+        */
+/*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 23:52:59 by porrapat          #+#    #+#             */
 /*   Updated: 2021/10/20 23:53:55 by porrapat         ###   ########.fr       */

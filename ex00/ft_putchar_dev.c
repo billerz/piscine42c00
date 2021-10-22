@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: porrapat <ppetchda@42.fr>                  +#+  +:+       +#+        */
+/*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 23:52:59 by porrapat          #+#    #+#             */
 /*   Updated: 2021/10/20 23:53:55 by porrapat         ###   ########.fr       */
@@ -17,8 +17,8 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int	main()
+int	main(void)
 {
 	ft_putchar('c');
-	return 0;
+	return (0);
 }
