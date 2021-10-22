@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                   :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppetchda <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -17,38 +17,21 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_seq_char(char a, char b, char c)
+void	ft_is_negative(int n)
 {
-	ft_putchar(a);
-	ft_putchar(b);
-	ft_putchar(c);
+	if (n >= 0)
+	{
+		ft_putchar('P');
+	}
+	else
+	{
+		ft_putchar('N');
+	}
 }
 
-void	ft_print_comb(void)
+int	main(void)
 {
-	char	a;
-	char	b;
-	char	c;
-
-	a = '0';
-	while (a <= '9')
-	{
-		b = a + 1;
-		while (b <= '9')
-		{
-			c = b + 1;
-			while (c <= '9')
-			{
-				ft_print_seq_char(a, b, c);
-				if (!(a == '7' && b == '8' && c == '9'))
-				{
-					ft_putchar(',');
-					ft_putchar(' ');
-				}
-				c++;
-			}
-			b++;
-		}
-		a++;
-	}
+	ft_is_negative(-5);
+	ft_is_negative(5);
+	return (0);
 }
