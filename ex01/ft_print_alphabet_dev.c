@@ -1,21 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: porrapat <ppetchda@42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/20 23:52:59 by porrapat          #+#    #+#             */
+/*   Updated: 2021/10/20 23:53:55 by porrapat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-	char mychar;
-	for(mychar = 'a'; mychar <= 'z'; mychar++)
+	char	mychar;
+
+	mychar = 'a';
+	while (mychar <= 'z')
 	{
 		ft_putchar(mychar);
+		mychar++;
 	}
 }
 
-int main()
+int	main(void)
 {
 	ft_print_alphabet();
-	return 0;
+	return (0);
 }
