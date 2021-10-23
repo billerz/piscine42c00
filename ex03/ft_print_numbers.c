@@ -28,9 +28,3 @@ void	ft_print_numbers(void)
 		letter++;
 	}
 }
-
-int	main(void)
-{
-	ft_print_numbers();
-	return (0);
-}
