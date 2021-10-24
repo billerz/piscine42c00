@@ -27,6 +27,7 @@ void	print_int_int_it(int a, int b, int last)
 	if (last != 1)
 	{
 		ft_putchar(',');
+		ft_putchar(' ');
 	}
 }
 
