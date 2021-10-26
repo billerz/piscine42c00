@@ -1,4 +1,4 @@
-
+.DEFAULT_GOAL := all
 norminette:
 	-norminette ./ex00/ft_putchar.c
 	-norminette ./ex01/ft_print_alphabet.c
@@ -17,9 +17,9 @@ compile:
 	-gcc test_ex03_ft_print_numbers.c -Wall -Werror -Wextra -o test_ex03_ft_print_numbers
 	-gcc test_ex04_ft_is_negative.c -Wall -Werror -Wextra -o test_ex04_ft_is_negative
 	-gcc test_ex05_ft_print_comb.c -Wall -Werror -Wextra -o test_ex05_ft_print_comb
-	-gcc test_ex06_ft_putnbr.c -Wall -Werror -Wextra -o test_ex06_ft_putnbr
+	-gcc test_ex06_ft_print_comb2.c -Wall -Werror -Wextra -o test_ex06_ft_print_comb2
 	-gcc test_ex07_ft_putnbr.c -Wall -Werror -Wextra -o test_ex07_ft_putnbr
-	-gcc test_ex08_ft_putnbr.c -Wall -Werror -Wextra -o test_ex08_ft_putnbr
+	-gcc test_ex08_ft_print_combn.c -Wall -Werror -Wextra -o test_ex08_ft_print_combn
 all:	norminette	compile
 
 clean:
@@ -30,9 +30,9 @@ clean:
 	-rm test_ex03_ft_print_numbers
 	-rm test_ex04_ft_is_negative
 	-rm test_ex05_ft_print_comb
-	-rm test_ex06_ft_putnbr
+	-rm test_ex06_ft_print_comb2
 	-rm test_ex07_ft_putnbr
-	-rm test_ex08_ft_putnbr
+	-rm test_ex08_ft_print_combn
 
 
 # hello:
