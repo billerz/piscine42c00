@@ -94,5 +94,15 @@ int	main(void)
 	ft_print_combn(4);
 	ft_putchar('\n');
 	ft_putchar('\n');
-	ft_print_combn(0);
+	ft_print_combn(5);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(6);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(7);
+	ft_putchar('\n');
+	ft_putchar('\n');
+	ft_print_combn(8);
+	ft_putchar('\n');
 }
