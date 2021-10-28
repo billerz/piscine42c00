@@ -1,4 +1,5 @@
 .DEFAULT_GOAL := all
+
 norminette:
 	-norminette ./ex00/ft_putchar.c
 	-norminette ./ex01/ft_print_alphabet.c
@@ -20,10 +21,46 @@ compile:
 	-gcc test_ex06_ft_print_comb2.c -Wall -Werror -Wextra -o test_ex06_ft_print_comb2
 	-gcc test_ex07_ft_putnbr.c -Wall -Werror -Wextra -o test_ex07_ft_putnbr
 	-gcc test_ex08_ft_print_combn.c -Wall -Werror -Wextra -o test_ex08_ft_print_combn
-all:	norminette	compile
+
+build-sample: compile
+	-./test_ex00_ft_putchar > result_sample_ex00_ft_putchar.txt
+	-./test_ex01_ft_print_alphabet > result_sample_ex01_ft_print_alphabet.txt
+	-./test_ex02_ft_print_reverse_alphabet > result_sample_ex02_ft_print_reverse_alphabet.txt
+	-./test_ex03_ft_print_numbers > result_sample_ex03_ft_print_numbers.txt
+	-./test_ex04_ft_is_negative > result_sample_ex04_ft_is_negative.txt
+	-./test_ex05_ft_print_comb > result_sample_ex05_ft_print_comb.txt
+	-./test_ex06_ft_print_comb2 > result_sample_ex06_ft_print_comb2.txt
+	-./test_ex07_ft_putnbr > result_sample_ex07_ft_putnbr.txt
+	-./test_ex08_ft_print_combn > result_sample_ex08_ft_print_combn.txt
+
+run:	compile
+	-./test_ex00_ft_putchar > result_current_ex00_ft_putchar.txt
+	-./test_ex01_ft_print_alphabet > result_current_ex01_ft_print_alphabet.txt
+	-./test_ex02_ft_print_reverse_alphabet > result_current_ex02_ft_print_reverse_alphabet.txt
+	-./test_ex03_ft_print_numbers > result_current_ex03_ft_print_numbers.txt
+	-./test_ex04_ft_is_negative > result_current_ex04_ft_is_negative.txt
+	-./test_ex05_ft_print_comb > result_current_ex05_ft_print_comb.txt
+	-./test_ex06_ft_print_comb2 > result_current_ex06_ft_print_comb2.txt
+	-./test_ex07_ft_putnbr > result_current_ex07_ft_putnbr.txt
+	-./test_ex08_ft_print_combn > result_current_ex08_ft_print_combn.txt
+
+all:	norminette	compile run
+
+test:	all
+	-diff result_current_ex00_ft_putchar.txt result_sample_ex00_ft_putchar.txt
+	-diff result_current_ex01_ft_print_alphabet.txt result_sample_ex01_ft_print_alphabet.txt
+	-diff result_current_ex02_ft_print_reverse_alphabet.txt result_sample_ex02_ft_print_reverse_alphabet.txt
+	-diff result_current_ex03_ft_print_numbers.txt result_sample_ex03_ft_print_numbers.txt
+	-diff result_current_ex04_ft_is_negative.txt result_sample_ex04_ft_is_negative.txt
+	-diff result_current_ex05_ft_print_comb.txt result_sample_ex05_ft_print_comb.txt
+	-diff result_current_ex06_ft_print_comb2.txt result_sample_ex06_ft_print_comb2.txt
+	-diff result_current_ex07_ft_putnbr.txt result_sample_ex07_ft_putnbr.txt
+	-diff result_current_ex08_ft_print_combn.txt result_sample_ex08_ft_print_combn.txt
+
 
 clean:
 	-rm -rf */*.out
+	-rm -rf result_current_ex*.txt
 	-rm test_ex00_ft_putchar
 	-rm test_ex01_ft_print_alphabet
 	-rm test_ex02_ft_print_reverse_alphabet
@@ -35,13 +72,10 @@ clean:
 	-rm test_ex08_ft_print_combn
 
 
-# hello:
-# 	echo "Hello World"
-# 	find . -regex '.*\.\(c\|cpp\|h\)$\' -print | norminette
+clean-sample:
+	-rm -rf result_sample_ex*.txt
 
-#	norminette
-
-#	git
-#	compile
-#	run
-#	clean
+clean-before-push-with-sample: clean
+	-git add .
+	-git commit -m "Build Sample Complete"
+	-git push origin master
