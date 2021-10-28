@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ex06/ft_print_comb2.c"
 
 void	ft_putchar(char c);
 void	print_int_int_it(int a, int b, int last);

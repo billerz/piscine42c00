@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "ex07/ft_putnbr.c"
+
+void	ft_putnbr(int nb);
 
 int	main(void)
 {

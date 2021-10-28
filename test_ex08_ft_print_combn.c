@@ -13,8 +13,6 @@
 #include <unistd.h>
 #include <stdbool.h>
 
-#include "ex08/ft_print_combn.c"
-
 void	ft_putchar(char c);
 void	ft_write_combo(int n, int holders[]);
 void	ft_print_combn_recursive(int n, int curr, int holders[], int st_index);

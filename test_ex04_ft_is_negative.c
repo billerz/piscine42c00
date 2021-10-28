@@ -1,6 +1,3 @@
-#include "ex04/ft_is_negative.c"
-// #include <stdio.h>
-
 void ft_is_negative(int n);
 
 int main(void) {
@@ -13,6 +10,6 @@ int main(void) {
         // printf("\n");
         i++;
     }
-    
+
     return 0;
 }

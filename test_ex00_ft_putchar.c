@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include "ex00/ft_putchar.c"
-
+void	ft_putchar(char c);
 int main(void)
 {
   char c = 'c';
